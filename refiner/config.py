@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     )
     
     SCHEMA_NAME: str = Field(
-        default="Google Drive Analytics",
+        default="HealthDataSov",
         description="Name of the schema"
     )
     
@@ -31,7 +31,7 @@ class Settings(BaseSettings):
     )
     
     SCHEMA_DESCRIPTION: str = Field(
-        default="Schema for the Google Drive DLP, representing some basic analytics of the Google user",
+        default="Schema for the HealthDataSov DataDAO, representing Google profile information and FHIR R4 patient EMR data",
         description="Description of the schema"
     )
     
