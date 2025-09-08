@@ -1,9 +1,6 @@
 from typing import Optional
 from pydantic import BaseModel
 
-
-
-
 from typing import List, Optional, Union
 from pydantic import BaseModel, EmailStr, Field
 from datetime import datetime, date
@@ -138,6 +135,6 @@ class GoogleProfileFHIRPatient(BaseModel):
     profile: Profile
     storage: Optional[Storage]
     metadata: Metadata
-    resourceType: str = Field("Bundle", const=True)
-    type: str = Field("transaction", const=True)
+    resourceType: Literal["Bundle"]
+    type: Literal["transaction"]
     entry: List[Entry]
