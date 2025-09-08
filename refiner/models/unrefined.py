@@ -2,7 +2,7 @@ from typing import Optional
 from pydantic import BaseModel
 
 from typing import List, Literal, Optional, Union
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, Field
 from datetime import datetime, date
 
 
@@ -130,7 +130,7 @@ class Entry(BaseModel):
 # ---------------------------------------------------
 class GoogleProfileFHIRPatient(BaseModel):
     userId: str
-    email: EmailStr
+    email: str
     timestamp: int
     profile: Profile
     storage: Optional[Storage]
