@@ -1,7 +1,7 @@
 from typing import Optional
 from pydantic import BaseModel
 
-from typing import List, Optional, Union
+from typing import List, Literal, Optional, Union
 from pydantic import BaseModel, EmailStr, Field
 from datetime import datetime, date
 
