@@ -41,13 +41,13 @@ class ExtensionInner(BaseModel):
 
 
 class Extension(BaseModel):
-    url: Optional[str]
-    valueCodeableConcept: Optional[CodeableConcept]
-    valueString: Optional[str]
-    valueCode: Optional[str]
-    valueDecimal: Optional[float]
-    valueAddress: Optional[dict]
-    extension: Optional[List[ExtensionInner]]
+    url: str
+    valueCodeableConcept: Optional[CodeableConcept] = None
+    valueString: Optional[str] = None
+    valueCode: Optional[str] = None
+    valueDecimal: Optional[float] = None
+    valueAddress: Optional[dict] = None
+    extension: Optional[List["Extension"]] = None
 
 
 class IdentifierType(BaseModel):
@@ -97,18 +97,18 @@ class Narrative(BaseModel):
 class PatientResource(BaseModel):
     resourceType: str
     id: str
-    text: Optional[Narrative]
-    extension: Optional[List[Extension]]
-    identifier: Optional[List[Identifier]]
-    name: Optional[List[HumanName]]
-    telecom: Optional[List[Telecom]]
-    gender: Optional[str]
-    birthDate: Optional[date]
-    deceasedDateTime: Optional[datetime]
-    address: Optional[List[Address]]
-    maritalStatus: Optional[MaritalStatus]
-    multipleBirthBoolean: Optional[bool]
-    communication: Optional[List[Communication]]
+    text: Optional[Narrative] = None
+    extension: Optional[List[Extension]] = None
+    identifier: Optional[List[Identifier]] = None
+    name: Optional[List[HumanName]] = None
+    telecom: Optional[List[Telecom]] = None
+    gender: Optional[str] = None
+    birthDate: Optional[date] = None
+    deceasedDateTime: Optional[datetime] = None
+    address: Optional[List[Address]] = None
+    maritalStatus: Optional[MaritalStatus] = None
+    multipleBirthBoolean: Optional[bool] = None
+    communication: Optional[List[Communication]] = None
 
 
 # ---------------------------------------------------
